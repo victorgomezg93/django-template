@@ -25,7 +25,7 @@ Open-source **Django Dashboard** with a modern design.
 > 👉 **Step 1** - Download the code from the GH repository (using `GIT`) 
 
 ```bash
-$ git clone https://github.com/app-generator/django-datta-able.git
+$ git clone https://github.com/victorgomezg93/django-template.git
 $ cd django-datta-able
 ```
 
