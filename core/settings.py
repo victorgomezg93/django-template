@@ -101,11 +101,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME'    : os.getenv('DB_NAME'     , 'appseed_db'),
-            'USER'    : os.getenv('DB_USERNAME' , 'appseed_db_usr'),
-            'PASSWORD': os.getenv('DB_PASS'     , 'pass'),
-            'HOST'    : os.getenv('DB_HOST'     , 'localhost'),
-            'PORT'    : os.getenv('DB_PORT'     , 3306),
+            "NAME": "django",
+            "USER": "django",
+            "PASSWORD": "django",
+            "HOST": "db",  # set in docker-compose.yml
+            "PORT": 5432,  # default postgres port
             }, 
     }
 

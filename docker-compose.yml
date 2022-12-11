@@ -1,5 +1,18 @@
 version: '3.8'
 services:
+  db:
+    image: postgres:14.0
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD=django
+      - POSTGRES_DB=django
+    networks:
+      - db_network
   appseed-app:
     container_name: appseed_app
     restart: always
@@ -20,16 +33,6 @@ services:
       - web_network
     depends_on: 
       - appseed-app
-  db:
-    image: postgres:14.0
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=django
-      - POSTGRES_PASSWORD=django
-      - POSTGRES_DB=django
-    networks:
-      - db_network
 networks:
   db_network:
     driver: bridge

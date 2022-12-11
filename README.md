@@ -26,7 +26,6 @@ Open-source **Django Dashboard** with a modern design.
 
 ```bash
 $ git clone https://github.com/victorgomezg93/django-template.git
-$ cd django-datta-able
 ```
 
 <br />
